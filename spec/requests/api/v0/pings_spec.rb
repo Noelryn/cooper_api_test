@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-Repec.describe Api::V0::PingsController, type: :request do
+RSpec.describe Api::V0::PingsController, type: :request do
     describe 'GET /v0/pings' do
         it 'should return Pong' do
             get '/api/v0/pings'
