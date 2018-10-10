@@ -47,9 +47,13 @@ RSpec.describe User, type: :model do
             emails = ['asdf@ds.com', 'hello@example.uk', 'test1234@yahoo.si',
                 'asdf@example.eu']
 
-             emails.each do |email|
-                 it{ is_expected.to allow_value(email).for(:email) }
-             end
-         end
-     end
+            emails.each do |email|
+                it{ is_expected.to allow_value(email).for(:email) }
+            end
+        end
+    end
+
+    describe 'Relations' do
+        it { is_expected.to have_many :performance_data }
+    end
 end

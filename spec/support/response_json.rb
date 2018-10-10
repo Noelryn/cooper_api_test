@@ -1,10 +1,9 @@
 module ResponseJSON
     def response_json
-        JSON.
-        vparse(reponse.body)
+      JSON.parse(response.body)
     end
-end
-
-RSpec.configure do |config|
+  end
+  
+  RSpec.configure do |config|
     config.include ResponseJSON
-end
+  end
